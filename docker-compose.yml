@@ -1,0 +1,60 @@
+# Local infrastructure for backend-catalogo.
+#
+# It only starts what belongs to this repository:
+#   - catalogo-db: PostgreSQL 16 (server database, never H2/SQLite)
+#   - backend-catalogo: the service itself, built from ./Dockerfile
+#
+# Redis and Kafka are remote services owned by the catedra; they are NOT started here.
+#
+# Usage:
+#   cp .env.example .env   # then edit .env
+#   docker compose up --build
+#
+# All values are read from .env (gitignored). See .env.example.
+
+name: backend-catalogo
+
+services:
+  catalogo-db:
+    image: postgres:16-alpine
+    container_name: catalogo-db
+    environment:
+      POSTGRES_DB: ${DB_NAME:-catalogo}
+      POSTGRES_USER: ${DB_USER:?DB_USER is required, copy .env.example to .env}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD is required, copy .env.example to .env}
+    ports:
+      # Exposed on the host so the service can also be run from the IDE during development.
+      - "${DB_PORT:-5433}:5432"
+    volumes:
+      - catalogo-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME:-catalogo}"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+
+  backend-catalogo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend-catalogo
+    depends_on:
+      catalogo-db:
+        condition: service_healthy
+    env_file:
+      # Every configuration value comes from the environment (.env), nothing is hardcoded.
+      - .env
+    environment:
+      # Inside the compose network the database host is the service name, not localhost.
+      # This overrides the value coming from env_file, which targets the host.
+      DB_URL: jdbc:postgresql://catalogo-db:5432/${DB_NAME:-catalogo}
+      DB_USER: ${DB_USER:?DB_USER is required, copy .env.example to .env}
+      DB_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD is required, copy .env.example to .env}
+    ports:
+      - "${APP_PORT:-8081}:${SERVER_PORT:-8081}"
+    restart: unless-stopped
+
+volumes:
+  catalogo-db-data:
