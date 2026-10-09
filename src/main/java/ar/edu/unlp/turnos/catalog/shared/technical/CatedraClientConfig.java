@@ -1,4 +1,4 @@
-package ar.edu.unlp.turnos.catalog.catedra.infrastructure.rest;
+package ar.edu.unlp.turnos.catalog.shared.technical;
 
 import ar.edu.unlp.turnos.catalog.shared.config.CatedraProperties;
 import java.net.http.HttpClient;

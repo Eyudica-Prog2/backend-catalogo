@@ -1,4 +1,4 @@
-package ar.edu.unlp.turnos.catalog.catedra.infrastructure.rest;
+package ar.edu.unlp.turnos.catalog.shared.technical;
 
 import com.nimbusds.jwt.SignedJWT;
 import java.text.ParseException;

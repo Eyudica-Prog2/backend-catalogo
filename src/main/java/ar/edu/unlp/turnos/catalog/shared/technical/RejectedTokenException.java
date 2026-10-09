@@ -1,4 +1,4 @@
-package ar.edu.unlp.turnos.catalog.catedra.infrastructure.rest;
+package ar.edu.unlp.turnos.catalog.shared.technical;
 
 /**
  * Signals that the technical token sent to the catedra was rejected (HTTP 401) and that a

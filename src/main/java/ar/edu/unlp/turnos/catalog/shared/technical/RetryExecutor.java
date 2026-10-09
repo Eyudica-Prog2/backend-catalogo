@@ -1,6 +1,6 @@
-package ar.edu.unlp.turnos.catalog.catedra.infrastructure.rest;
+package ar.edu.unlp.turnos.catalog.shared.technical;
 
-import ar.edu.unlp.turnos.catalog.catedra.application.exception.CatedraException;
+import ar.edu.unlp.turnos.catalog.shared.error.CatedraException;
 import ar.edu.unlp.turnos.catalog.shared.config.CatedraProperties;
 import java.util.function.Predicate;
 import java.util.function.Supplier;

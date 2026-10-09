@@ -1,4 +1,4 @@
-package ar.edu.unlp.turnos.catalog.catedra.infrastructure.rest;
+package ar.edu.unlp.turnos.catalog.shared.technical;
 
 /**
  * Marks a call to the catedra that failed in a way worth retrying (HTTP 5xx or timeout).

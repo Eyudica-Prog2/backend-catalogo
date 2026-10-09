@@ -1,6 +1,6 @@
 package ar.edu.unlp.turnos.catalog.catedra.application.usecases;
 
-import ar.edu.unlp.turnos.catalog.catedra.application.exception.CatedraException;
+import ar.edu.unlp.turnos.catalog.shared.error.CatedraException;
 import ar.edu.unlp.turnos.catalog.catedra.domain.model.CatedraIntegration;
 import ar.edu.unlp.turnos.catalog.catedra.domain.ports.in.GetIntegrationStatusUseCase;
 import ar.edu.unlp.turnos.catalog.catedra.domain.ports.out.IntegrationRepository;
