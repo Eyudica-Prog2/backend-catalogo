@@ -6,8 +6,9 @@ import java.util.List;
  * Base exception for every error that must be exposed as {@code application/problem+json}
  * with a stable functional {@code code}.
  *
- * <p>Slice specific exceptions (e.g. {@code CatedraException}) extend this class, so the
- * shared error handler never has to import a slice.</p>
+ * <p>Shared and slice specific exceptions (e.g. {@link CatedraException},
+ * {@code CatalogException}) extend this class, so the shared error handler never has to
+ * import a slice.</p>
  */
 public class ApiException extends RuntimeException {
 

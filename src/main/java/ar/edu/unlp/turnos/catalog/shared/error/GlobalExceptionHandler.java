@@ -16,6 +16,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.resource.NoResourceFoundException;
 
@@ -53,6 +54,19 @@ public class GlobalExceptionHandler {
                                                                 HttpServletRequest request) {
         return problem(HttpStatus.BAD_REQUEST, ErrorCodes.VALIDATION_ERROR,
                 "A required request parameter is missing.", request, List.of());
+    }
+
+    /**
+     * A parameter that cannot be converted into the expected type: {@code page=abc},
+     * {@code categoryId=abc} or {@code date=not-a-date}. Without this handler the
+     * {@code IllegalArgumentException} would reach the catch-all and be reported as an
+     * internal error instead of a client mistake.
+     */
+    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+    public ResponseEntity<ProblemDetail> handleTypeMismatch(MethodArgumentTypeMismatchException exception,
+                                                            HttpServletRequest request) {
+        return problem(HttpStatus.BAD_REQUEST, ErrorCodes.VALIDATION_ERROR,
+                "A request parameter does not have the expected format.", request, List.of());
     }
 
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)

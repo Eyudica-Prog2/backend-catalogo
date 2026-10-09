@@ -28,4 +28,12 @@ public final class ErrorCodes {
     public static final String CATEDRA_INVALID_RESPONSE = "CATEDRA_INVALID_RESPONSE";
     public static final String CATEDRA_INTEGRATION_NOT_FOUND = "CATEDRA_INTEGRATION_NOT_FOUND";
     public static final String CATEDRA_ERROR = "CATEDRA_ERROR";
+
+    // Local copy of the catalog (snapshot, search and internal contract).
+    public static final String PROFESSIONAL_NOT_FOUND = "PROFESSIONAL_NOT_FOUND";
+    public static final String SNAPSHOT_INVALID = "SNAPSHOT_INVALID";
+
+    // End user registration and authentication (compatible with the JHipster contract).
+    public static final String USERNAME_ALREADY_EXISTS = "USERNAME_ALREADY_EXISTS";
+    public static final String EMAIL_ALREADY_EXISTS = "EMAIL_ALREADY_EXISTS";
 }
