@@ -33,6 +33,21 @@ spring:
     serialization:
       write-dates-as-timestamps: false
 
+  kafka:
+    # Broker coordinates of the catedra, same externalized values as catedra.kafka.
+    bootstrap-servers: ${CATEDRA_KAFKA_BOOTSTRAP_SERVERS}
+    consumer:
+      group-id: ${CATEDRA_KAFKA_CONSUMER_GROUP_ID}
+      # The offset of a record is committed only after the listener finished persisting
+      # its effects (contract v1, section 16): manual acknowledgement, never automatic.
+      enable-auto-commit: false
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      # One record acknowledged at a time: the offset moves only when its effects are stored.
+      ack-mode: record
+
 server:
   port: ${SERVER_PORT:8081}
   error:
@@ -47,12 +62,25 @@ app:
     # HS256 secret shared with backend-turnos. Minimum 32 characters (256 bits).
     secret: ${APP_JWT_SECRET}
     expiry-seconds: ${APP_JWT_EXPIRY_SECONDS}
+    # Lifetime used when the client asks to be remembered at POST /api/authenticate.
+    remember-me-expiry-seconds: ${APP_JWT_REMEMBER_ME_EXPIRY_SECONDS:604800}
   secrets:
     # Source for the derived AES-256-GCM key used to encrypt persisted secrets.
     key: ${APP_SECRETS_KEY}
   cors:
     # Comma separated origins; empty means "no cross-origin access allowed".
     allowed-origins: ${CORS_ALLOWED_ORIGINS:}
+  sync:
+    scheduler:
+      # Periodic catch up that recovers from lost CatalogUpdated notifications (section 16).
+      enabled: ${APP_SYNC_SCHEDULER_ENABLED:true}
+      # First run after the boot, then one run every fixed delay; milliseconds.
+      initial-delay-ms: ${APP_SYNC_SCHEDULER_INITIAL_DELAY_MS:60000}
+      fixed-delay-ms: ${APP_SYNC_SCHEDULER_FIXED_DELAY_MS:300000}
+    kafka:
+      # false starts the service without attaching a consumer to the catalog topic, which is
+      # how the automated tests (and an operator without a broker) run the service.
+      listener-enabled: ${APP_SYNC_KAFKA_LISTENER_ENABLED:true}
 
 catedra:
   api:
