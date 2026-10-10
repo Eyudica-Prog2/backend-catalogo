@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>ar.edu.unlp.turnos</groupId>
+    <groupId>ar.edu.um.turnos</groupId>
     <artifactId>backend-catalogo</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <name>backend-catalogo</name>

@@ -114,4 +114,4 @@ logging:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{40} : %msg%n"
   level:
     root: INFO
-    ar.edu.unlp.turnos.catalog: INFO
+    ar.edu.um.turnos.catalog: INFO
