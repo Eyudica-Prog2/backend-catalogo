@@ -15,5 +15,6 @@ target/
 .settings/
 
 .env
+info/
 .DS_Store
 Thumbs.db
