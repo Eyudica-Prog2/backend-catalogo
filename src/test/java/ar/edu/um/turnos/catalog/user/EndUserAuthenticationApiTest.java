@@ -61,6 +61,8 @@ class EndUserAuthenticationApiTest extends CatalogApiIntegrationTest {
         assertThat(jwt.getJWTClaimsSet().getSubject()).isEqualTo(LOGIN);
         assertThat(jwt.getJWTClaimsSet().getIssuer()).isEqualTo("backend-catalogo");
         assertThat(jwt.getJWTClaimsSet().getStringClaim("publicId")).isNotBlank();
+        assertThat(jwt.getJWTClaimsSet().getStringClaim("firstName")).isEqualTo("Ana");
+        assertThat(jwt.getJWTClaimsSet().getStringClaim("lastName")).isEqualTo("Perez");
         assertThat(jwt.getJWTClaimsSet().getStringListClaim("authorities"))
                 .containsExactly("ROLE_USER");
         assertThat((expiresAt.getTime() - issuedAt.getTime()) / 1000)

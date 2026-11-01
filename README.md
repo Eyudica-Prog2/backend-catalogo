@@ -104,7 +104,9 @@ token, con firma rota o con otro issuer responde `401 UNAUTHORIZED`.
   Errores: `VALIDATION_ERROR`, `USERNAME_ALREADY_EXISTS`, `EMAIL_ALREADY_EXISTS`.
 - `POST /api/authenticate`: body `{username, password, rememberMe}` → `200` con
   `{id_token, token_type, expires_in}`. JWT **HS256** firmado con `APP_JWT_SECRET`, issuer
-  `backend-catalogo` y claims `sub` (login), `publicId` (UUID estable) y `authorities`.
+  `backend-catalogo` y claims `sub` (login), `publicId` (UUID estable), `authorities`,
+  `firstName` y `lastName`. Los nombres se usan para confirmar inicialmente una reserva en
+  `backend-turnos`; no se incluyen email ni credenciales.
   `rememberMe` solo alarga la vida del token (`APP_JWT_REMEMBER_ME_EXPIRY_SECONDS`).
   Credenciales inválidas → `401 UNAUTHORIZED` con el mismo detalle para un login inexistente
   y para una contraseña errónea (sin enumerar usuarios).

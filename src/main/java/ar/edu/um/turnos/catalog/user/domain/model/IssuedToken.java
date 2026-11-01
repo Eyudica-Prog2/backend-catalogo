@@ -8,8 +8,8 @@ import lombok.Getter;
  *
  * <p>The token itself is a bearer credential: it is returned once, never persisted and never
  * logged. Its content (HS256, issuer {@code backend-catalogo} and the claims {@code sub},
- * {@code publicId} and {@code authorities}) is decided by the adapter that owns the signing
- * key.</p>
+ * {@code publicId}, {@code firstName}, {@code lastName} and {@code authorities}) is decided by
+ * the adapter that owns the signing key.</p>
  */
 @Getter
 @Builder

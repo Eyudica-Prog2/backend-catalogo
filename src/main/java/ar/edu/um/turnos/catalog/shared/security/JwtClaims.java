@@ -21,6 +21,12 @@ public final class JwtClaims {
     /** Roles of the user, a list of strings such as {@code ["ROLE_USER"]}. */
     public static final String AUTHORITIES = "authorities";
 
+    /** Registered user's first name, consumed by backend-turnos when confirming a reservation. */
+    public static final String FIRST_NAME = "firstName";
+
+    /** Registered user's last name, consumed by backend-turnos when confirming a reservation. */
+    public static final String LAST_NAME = "lastName";
+
     private JwtClaims() {
     }
 }

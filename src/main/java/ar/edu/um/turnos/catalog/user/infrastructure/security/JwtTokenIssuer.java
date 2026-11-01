@@ -26,6 +26,8 @@ import org.springframework.stereotype.Component;
  *   <li>{@code sub}: login of the user, the identity every other service reads;</li>
  *   <li>{@code publicId}: stable UUID of the account, the value that other services store as
  *       their own external identifier;</li>
+ *   <li>{@code firstName} and {@code lastName}: registered profile names needed when a
+ *       reservation is initially confirmed with the catedra;</li>
  *   <li>{@code authorities}: roles of the user, read by the security filter of every request
  *       that uses this token;</li>
  *   <li>{@code iss}: {@code backend-catalogo}, validated by this service when it consumes its
@@ -60,6 +62,8 @@ public class JwtTokenIssuer implements AuthTokenIssuer {
         JWTClaimsSet claims = new JWTClaimsSet.Builder()
                 .subject(user.getLogin())
                 .claim(JwtClaims.PUBLIC_ID, publicIdOf(user))
+                .claim(JwtClaims.FIRST_NAME, user.getFirstName())
+                .claim(JwtClaims.LAST_NAME, user.getLastName())
                 .claim(JwtClaims.AUTHORITIES, authoritiesOf(user))
                 .issuer(JwtClaims.ISSUER)
                 .issueTime(issuedAt)
