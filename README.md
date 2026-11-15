@@ -1,5 +1,9 @@
 # backend-catalogo
 
+La arquitectura combinada de los dos backends, la propiedad de datos, el contrato HTTP con
+`backend-turnos`, la decisión de JWT y el transporte de despliegue están documentados en
+[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+
 Servicio del catálogo de profesionales de Turnos. Mantiene una **copia propia** del catálogo
 que publica la catedra, la sincroniza de forma incremental y expone la búsqueda a los demás
 servicios y a la app.
@@ -138,11 +142,14 @@ Las de esta iteración:
 
 ```bash
 cp .env.example .env   # completar credenciales
+docker network create backend-integration  # crear una sola vez para ambos backends
 docker compose up --build
 ```
 
 `docker-compose.yml` levanta PostgreSQL 16 y el servicio. Redis y Kafka pertenecen a la
 catedra y no se levantan localmente: sus coordenadas llegan por entorno.
+`backend-turnos` comparte la red Docker `backend-integration` y alcanza este servicio por el
+DNS `backend-catalogo`; los puertos publicados al host quedan limitados a loopback.
 
 ## Pruebas
 
