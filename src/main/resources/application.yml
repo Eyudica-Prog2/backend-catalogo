@@ -50,6 +50,9 @@ spring:
 
 server:
   port: ${SERVER_PORT:8081}
+  # Production TLS terminates at the trusted ingress/reverse proxy; trust forwarded headers
+  # only when the service is reachable exclusively through that proxy/private network.
+  forward-headers-strategy: framework
   error:
     whitelabel:
       enabled: false
