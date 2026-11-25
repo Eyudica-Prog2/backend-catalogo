@@ -1,0 +1,17 @@
+# Build artifacts
+target/
+
+# Version control
+.git/
+.gitignore
+
+# Environment files with real secrets must never enter the build context
+.env
+info/
+
+# Documentation and local tooling (not needed to build the image)
+*.md
+.idea/
+*.iml
+.vscode/
+docker-compose.yml
