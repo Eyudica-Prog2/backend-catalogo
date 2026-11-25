@@ -1,8 +1,9 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.kafka.mapper;
 
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogUpdatedEvent;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.kafka.dto.CatalogUpdatedPayload;
-import org.springframework.stereotype.Component;
 
 /**
  * Maps a {@code CatalogUpdated} payload into its domain event (contract v1, section 15.3).

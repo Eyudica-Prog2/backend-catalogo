@@ -1,5 +1,7 @@
 package ar.edu.um.turnos.catalog.user.infrastructure.web.mapper;
 
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.user.domain.model.Credentials;
 import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
 import ar.edu.um.turnos.catalog.user.domain.model.IssuedToken;
@@ -8,7 +10,6 @@ import ar.edu.um.turnos.catalog.user.infrastructure.web.dto.AccountResponse;
 import ar.edu.um.turnos.catalog.user.infrastructure.web.dto.AuthenticateRequest;
 import ar.edu.um.turnos.catalog.user.infrastructure.web.dto.RegisterRequest;
 import ar.edu.um.turnos.catalog.user.infrastructure.web.dto.TokenResponse;
-import org.springframework.stereotype.Component;
 
 /**
  * Maps the HTTP bodies of the {@code user} slice into domain values and back.

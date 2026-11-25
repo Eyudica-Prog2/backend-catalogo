@@ -10,17 +10,18 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import ar.edu.um.turnos.catalog.catalog.application.exception.CatalogException;
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
-import ar.edu.um.turnos.catalog.support.CatalogFixtures;
 import java.time.Instant;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import ar.edu.um.turnos.catalog.catalog.application.exception.CatalogException;
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
+import ar.edu.um.turnos.catalog.support.CatalogFixtures;
 
 /**
  * Unit test of the use case that applies a snapshot.

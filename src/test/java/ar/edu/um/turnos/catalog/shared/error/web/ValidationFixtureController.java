@@ -1,6 +1,5 @@
 package ar.edu.um.turnos.catalog.shared.error.web;
 
-import ar.edu.um.turnos.catalog.shared.error.CatedraException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import ar.edu.um.turnos.catalog.shared.error.CatedraException;
 
 /**
  * Test only controller. It exists to exercise the global exception handler end to end,

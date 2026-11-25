@@ -1,16 +1,17 @@
 package ar.edu.um.turnos.catalog.catedra.application.usecases;
 
-import ar.edu.um.turnos.catalog.catedra.application.IntegrationConsistencyChecker;
-import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
-import ar.edu.um.turnos.catalog.catedra.domain.ports.in.RefreshIntegrationUseCase;
-import ar.edu.um.turnos.catalog.catedra.domain.ports.out.CatedraIntegrationGateway;
-import ar.edu.um.turnos.catalog.catedra.domain.ports.out.IntegrationRepository;
 import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.catedra.application.IntegrationConsistencyChecker;
+import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
+import ar.edu.um.turnos.catalog.catedra.domain.ports.in.RefreshIntegrationUseCase;
+import ar.edu.um.turnos.catalog.catedra.domain.ports.out.CatedraIntegrationGateway;
+import ar.edu.um.turnos.catalog.catedra.domain.ports.out.IntegrationRepository;
 
 /**
  * Refreshes the locally stored technical integration.

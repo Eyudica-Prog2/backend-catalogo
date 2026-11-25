@@ -8,11 +8,6 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import ar.edu.um.turnos.catalog.shared.error.CatedraException;
-import ar.edu.um.turnos.catalog.catedra.application.usecases.RefreshIntegrationUseCaseImpl;
-import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
-import ar.edu.um.turnos.catalog.catedra.domain.ports.out.CatedraIntegrationGateway;
-import ar.edu.um.turnos.catalog.catedra.domain.ports.out.IntegrationRepository;
 import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
@@ -20,6 +15,12 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import ar.edu.um.turnos.catalog.catedra.application.usecases.RefreshIntegrationUseCaseImpl;
+import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
+import ar.edu.um.turnos.catalog.catedra.domain.ports.out.CatedraIntegrationGateway;
+import ar.edu.um.turnos.catalog.catedra.domain.ports.out.IntegrationRepository;
+import ar.edu.um.turnos.catalog.shared.error.CatedraException;
 
 /**
  * Unit test of the refresh use case: the outbound ports are mocked, no Spring context.

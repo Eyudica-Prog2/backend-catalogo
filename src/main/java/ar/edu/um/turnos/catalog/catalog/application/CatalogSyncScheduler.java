@@ -1,13 +1,14 @@
 package ar.edu.um.turnos.catalog.catalog.application;
 
-import ar.edu.um.turnos.catalog.catalog.domain.ports.in.RunIncrementalSyncUseCase;
-import ar.edu.um.turnos.catalog.shared.error.ApiException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.catalog.domain.ports.in.RunIncrementalSyncUseCase;
+import ar.edu.um.turnos.catalog.shared.error.ApiException;
 
 /**
  * Periodic reconciliation of the local copy against Redis (statement sections 6 and 8,
@@ -39,6 +40,8 @@ public class CatalogSyncScheduler {
      */
     @Scheduled(initialDelayString = "${app.sync.scheduler.initial-delay-ms:60000}",
             fixedDelayString = "${app.sync.scheduler.fixed-delay-ms:300000}")
+
+    // cambiar tiempo
     public void catchUpWithRedis() {
         try {
             runIncrementalSync.runIncrementalSync();

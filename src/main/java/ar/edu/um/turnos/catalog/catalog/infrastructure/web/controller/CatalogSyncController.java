@@ -1,16 +1,17 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.web.controller;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetSyncStatusUseCase;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.in.RunFullSyncUseCase;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.in.RunIncrementalSyncUseCase;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.SyncStatusResponse;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.web.mapper.SyncDtoMapper;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Status and control of the catalog synchronization (section 4.1 of the statement).

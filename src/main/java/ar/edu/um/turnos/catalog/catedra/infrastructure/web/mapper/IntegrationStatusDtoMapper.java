@@ -1,8 +1,9 @@
 package ar.edu.um.turnos.catalog.catedra.infrastructure.web.mapper;
 
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
 import ar.edu.um.turnos.catalog.catedra.infrastructure.web.dto.IntegrationStatusResponse;
-import org.springframework.stereotype.Component;
 
 /**
  * Maps the domain model into the HTTP response of this service.

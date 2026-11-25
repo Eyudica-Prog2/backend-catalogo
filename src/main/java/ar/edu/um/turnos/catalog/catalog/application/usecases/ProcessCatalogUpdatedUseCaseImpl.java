@@ -1,15 +1,16 @@
 package ar.edu.um.turnos.catalog.catalog.application.usecases;
 
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogEventOutcome;
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogUpdatedEvent;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.in.ProcessCatalogUpdatedUseCase;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.in.RunIncrementalSyncUseCase;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.out.ProcessedEventRepository;
 import java.time.Instant;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogEventOutcome;
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogUpdatedEvent;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.in.ProcessCatalogUpdatedUseCase;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.in.RunIncrementalSyncUseCase;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.out.ProcessedEventRepository;
 
 /**
  * Applies a {@code CatalogUpdated} notification idempotently (contract v1, section 18.1).

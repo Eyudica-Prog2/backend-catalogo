@@ -1,14 +1,15 @@
 package ar.edu.um.turnos.catalog.support;
 
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
-import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
-import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalCategory;
-import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklySchedule;
 import java.time.DayOfWeek;
 import java.time.Instant;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
+import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
+import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalCategory;
+import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklySchedule;
 
 /**
  * Catalog snapshots used by the tests.

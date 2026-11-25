@@ -1,5 +1,12 @@
 package ar.edu.um.turnos.catalog.catalog.application.usecases;
 
+import java.time.Instant;
+import java.util.List;
+import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogChanges;
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncDiagnostic;
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
@@ -15,12 +22,6 @@ import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncDiagnostics;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
 import ar.edu.um.turnos.catalog.shared.error.ApiException;
 import ar.edu.um.turnos.catalog.shared.error.CatedraException;
-import java.time.Instant;
-import java.util.List;
-import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * Applies the versions published in Redis that this service has not applied yet.

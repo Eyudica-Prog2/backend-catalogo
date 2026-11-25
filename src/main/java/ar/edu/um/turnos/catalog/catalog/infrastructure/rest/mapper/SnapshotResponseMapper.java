@@ -1,5 +1,8 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.rest.mapper;
 
+import java.util.List;
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
 import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalCategory;
@@ -8,8 +11,6 @@ import ar.edu.um.turnos.catalog.catalog.infrastructure.rest.dto.SnapshotCategory
 import ar.edu.um.turnos.catalog.catalog.infrastructure.rest.dto.SnapshotProfessionalResponse;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.rest.dto.SnapshotResponse;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.rest.dto.SnapshotWeeklyScheduleResponse;
-import java.util.List;
-import org.springframework.stereotype.Component;
 
 /**
  * Maps the snapshot of contract v1 into the domain model of the local copy.

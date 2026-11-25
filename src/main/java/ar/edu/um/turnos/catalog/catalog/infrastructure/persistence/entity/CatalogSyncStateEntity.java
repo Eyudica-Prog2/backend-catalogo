@@ -1,6 +1,5 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity;
 
-import ar.edu.um.turnos.catalog.catalog.domain.model.SyncResult;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -14,6 +13,8 @@ import jakarta.persistence.Table;
 import java.time.Instant;
 import lombok.Getter;
 import lombok.Setter;
+
+import ar.edu.um.turnos.catalog.catalog.domain.model.SyncResult;
 
 /**
  * JPA representation of the single row of {@code catalog_sync_state}.

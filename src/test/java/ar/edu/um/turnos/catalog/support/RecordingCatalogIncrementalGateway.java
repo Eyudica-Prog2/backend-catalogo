@@ -1,15 +1,16 @@
 package ar.edu.um.turnos.catalog.support;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogChanges;
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogVersionWindow;
 import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalCategory;
 import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklySchedule;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogIncrementalGateway;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
 
 /**
  * Decorates the real incremental gateway so a test can see <em>which</em> key of the catedra

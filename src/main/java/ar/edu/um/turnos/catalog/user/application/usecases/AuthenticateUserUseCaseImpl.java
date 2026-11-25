@@ -1,5 +1,10 @@
 package ar.edu.um.turnos.catalog.user.application.usecases;
 
+import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.user.application.exception.UserException;
 import ar.edu.um.turnos.catalog.user.domain.model.Credentials;
 import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
@@ -8,10 +13,6 @@ import ar.edu.um.turnos.catalog.user.domain.ports.in.AuthenticateUserUseCase;
 import ar.edu.um.turnos.catalog.user.domain.ports.out.AuthTokenIssuer;
 import ar.edu.um.turnos.catalog.user.domain.ports.out.PasswordHasher;
 import ar.edu.um.turnos.catalog.user.domain.ports.out.UserRepository;
-import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * Verifies the credentials of an end user and issues the token of the session.

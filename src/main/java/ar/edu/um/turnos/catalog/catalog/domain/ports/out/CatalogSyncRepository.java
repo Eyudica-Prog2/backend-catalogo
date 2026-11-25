@@ -1,5 +1,9 @@
 package ar.edu.um.turnos.catalog.catalog.domain.ports.out;
 
+import java.time.Instant;
+import java.util.List;
+import java.util.Optional;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogVersionWindow;
@@ -7,9 +11,6 @@ import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalCategory;
 import ar.edu.um.turnos.catalog.catalog.domain.model.SyncResult;
 import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklySchedule;
-import java.time.Instant;
-import java.util.List;
-import java.util.Optional;
 
 /**
  * Outbound port: write access to the local copy and to the synchronization state.

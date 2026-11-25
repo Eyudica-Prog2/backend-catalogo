@@ -1,6 +1,5 @@
 package ar.edu.um.turnos.catalog.shared.security;
 
-import ar.edu.um.turnos.catalog.shared.config.AppCorsProperties;
 import java.util.Arrays;
 import java.util.List;
 import org.springframework.context.annotation.Bean;
@@ -9,6 +8,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import ar.edu.um.turnos.catalog.shared.config.AppCorsProperties;
 
 /**
  * CORS policy, fully configured from the environment.

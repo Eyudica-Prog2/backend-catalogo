@@ -1,11 +1,12 @@
 package ar.edu.um.turnos.catalog.shared.technical;
 
-import ar.edu.um.turnos.catalog.shared.error.CatedraException;
-import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
+import ar.edu.um.turnos.catalog.shared.error.CatedraException;
 
 /**
  * Bounded retry with exponential backoff.

@@ -1,8 +1,9 @@
 package ar.edu.um.turnos.catalog.catalog.domain.model;
 
-import ar.edu.um.turnos.catalog.shared.util.Strings;
 import java.util.Locale;
 import java.util.Set;
+
+import ar.edu.um.turnos.catalog.shared.util.Strings;
 
 /**
  * Criteria of {@code GET /api/professionals}.

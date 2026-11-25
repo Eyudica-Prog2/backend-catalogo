@@ -1,8 +1,9 @@
 package ar.edu.um.turnos.catalog.user.infrastructure.security;
 
-import ar.edu.um.turnos.catalog.user.domain.ports.out.PasswordHasher;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.user.domain.ports.out.PasswordHasher;
 
 /**
  * Outbound adapter that hashes the password of an end user with BCrypt.

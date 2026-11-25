@@ -2,15 +2,6 @@ package ar.edu.um.turnos.catalog.catalog;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
-import ar.edu.um.turnos.catalog.CatalogApplication;
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
-import ar.edu.um.turnos.catalog.support.CatedraRedisFixture;
-import ar.edu.um.turnos.catalog.support.RecordingCatalogIncrementalGateway;
-import ar.edu.um.turnos.catalog.support.RecordingSyncConfiguration;
-import ar.edu.um.turnos.catalog.support.StubCatalogSnapshotGateway;
-import ar.edu.um.turnos.catalog.support.StubCatalogSnapshotConfiguration;
-import ar.edu.um.turnos.catalog.support.TestEnvironment;
-import ar.edu.um.turnos.catalog.support.TestTokens;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -23,6 +14,16 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.transaction.annotation.Transactional;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.utility.DockerImageName;
+
+import ar.edu.um.turnos.catalog.CatalogApplication;
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
+import ar.edu.um.turnos.catalog.support.CatedraRedisFixture;
+import ar.edu.um.turnos.catalog.support.RecordingCatalogIncrementalGateway;
+import ar.edu.um.turnos.catalog.support.RecordingSyncConfiguration;
+import ar.edu.um.turnos.catalog.support.StubCatalogSnapshotConfiguration;
+import ar.edu.um.turnos.catalog.support.StubCatalogSnapshotGateway;
+import ar.edu.um.turnos.catalog.support.TestEnvironment;
+import ar.edu.um.turnos.catalog.support.TestTokens;
 
 /**
  * Base class of the integration tests of the catalog API: real Spring context, MockMvc and a

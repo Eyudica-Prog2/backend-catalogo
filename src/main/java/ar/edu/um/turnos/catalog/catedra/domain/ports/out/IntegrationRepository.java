@@ -1,7 +1,8 @@
 package ar.edu.um.turnos.catalog.catedra.domain.ports.out;
 
-import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
 import java.util.Optional;
+
+import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
 
 /**
  * Outbound port: local persistence of the technical integration.

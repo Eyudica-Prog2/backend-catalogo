@@ -3,10 +3,11 @@ package ar.edu.um.turnos.catalog.catedra.infrastructure.rest.mapper;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+import org.junit.jupiter.api.Test;
+
 import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
 import ar.edu.um.turnos.catalog.catedra.domain.model.ProvisioningStatus;
 import ar.edu.um.turnos.catalog.catedra.infrastructure.rest.dto.IntegrationResponse;
-import org.junit.jupiter.api.Test;
 
 /**
  * Mapper unit test: contract payload to domain, including nulls and edge cases, with no HTTP

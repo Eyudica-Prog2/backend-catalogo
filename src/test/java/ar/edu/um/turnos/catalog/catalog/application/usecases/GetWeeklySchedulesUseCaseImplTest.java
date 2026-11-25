@@ -1,17 +1,10 @@
 package ar.edu.um.turnos.catalog.catalog.application.usecases;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.groups.Tuple.tuple;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.groups.Tuple.tuple;
 import static org.mockito.Mockito.when;
 
-import ar.edu.um.turnos.catalog.catalog.application.exception.CatalogException;
-import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
-import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalDetails;
-import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklySchedule;
-import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklyScheduleQuery;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetProfessionalByIdUseCase;
-import ar.edu.um.turnos.catalog.support.CatalogFixtures;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
@@ -21,6 +14,14 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import ar.edu.um.turnos.catalog.catalog.application.exception.CatalogException;
+import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
+import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalDetails;
+import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklySchedule;
+import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklyScheduleQuery;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetProfessionalByIdUseCase;
+import ar.edu.um.turnos.catalog.support.CatalogFixtures;
 
 /**
  * Unit tests of the use case that reads the weekly schedules of a professional.

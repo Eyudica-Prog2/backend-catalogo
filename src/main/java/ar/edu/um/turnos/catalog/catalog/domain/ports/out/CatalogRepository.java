@@ -1,11 +1,12 @@
 package ar.edu.um.turnos.catalog.catalog.domain.ports.out;
 
+import java.util.List;
+import java.util.Optional;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalCategory;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalDetails;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalPage;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalSearchCriteria;
-import java.util.List;
-import java.util.Optional;
 
 /**
  * Outbound port: read access to the local copy of the catalog.

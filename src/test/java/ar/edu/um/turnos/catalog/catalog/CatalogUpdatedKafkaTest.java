@@ -6,6 +6,10 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogRepository;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
@@ -14,9 +18,6 @@ import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.repository.Jp
 import ar.edu.um.turnos.catalog.shared.error.CatedraException;
 import ar.edu.um.turnos.catalog.support.CatalogFixtures;
 import ar.edu.um.turnos.catalog.support.CatedraRedisFixture;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 
 /**
  * Consumption of {@code CatalogUpdated} from {@code catedra.catalog.{groupId}}

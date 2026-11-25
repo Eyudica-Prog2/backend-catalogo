@@ -1,11 +1,12 @@
 package ar.edu.um.turnos.catalog.catalog.application.usecases;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.application.exception.CatalogException;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalDetails;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetProfessionalByIdUseCase;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 /**
  * Reads one professional with its weekly schedules from the local copy.

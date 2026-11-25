@@ -1,5 +1,7 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.mapper;
 
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
 import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalCategory;
@@ -8,7 +10,6 @@ import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.Catalo
 import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.ProfessionalCategoryEntity;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.ProfessionalEntity;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.WeeklyScheduleEntity;
-import org.springframework.stereotype.Component;
 
 /**
  * Maps the domain of the local copy to the JPA entities and back.

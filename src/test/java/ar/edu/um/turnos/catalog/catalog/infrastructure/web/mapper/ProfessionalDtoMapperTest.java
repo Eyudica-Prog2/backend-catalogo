@@ -3,6 +3,11 @@ package ar.edu.um.turnos.catalog.catalog.infrastructure.web.mapper;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+import java.util.Arrays;
+import java.util.List;
+import org.assertj.core.api.ThrowableAssert.ThrowingCallable;
+import org.junit.jupiter.api.Test;
+
 import ar.edu.um.turnos.catalog.catalog.application.exception.CatalogException;
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
 import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
@@ -16,10 +21,6 @@ import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.ProfessionalDetai
 import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.ProfessionalResponse;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.WeeklyScheduleSlotResponse;
 import ar.edu.um.turnos.catalog.support.CatalogFixtures;
-import java.util.Arrays;
-import java.util.List;
-import org.assertj.core.api.ThrowableAssert.ThrowingCallable;
-import org.junit.jupiter.api.Test;
 
 /**
  * Unit test of the mapper between the domain of the local copy and the bodies of the API.

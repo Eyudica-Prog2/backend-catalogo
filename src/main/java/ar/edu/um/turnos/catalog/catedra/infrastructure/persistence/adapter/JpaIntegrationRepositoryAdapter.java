@@ -1,16 +1,17 @@
 package ar.edu.um.turnos.catalog.catedra.infrastructure.persistence.adapter;
 
+import java.time.Instant;
+import java.util.Optional;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
 import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
 import ar.edu.um.turnos.catalog.catedra.domain.ports.out.IntegrationRepository;
 import ar.edu.um.turnos.catalog.catedra.infrastructure.persistence.entity.CatedraIntegrationEntity;
 import ar.edu.um.turnos.catalog.catedra.infrastructure.persistence.mapper.CatedraIntegrationMapper;
 import ar.edu.um.turnos.catalog.catedra.infrastructure.persistence.repository.JpaCatedraIntegrationRepository;
 import ar.edu.um.turnos.catalog.shared.crypto.SecretCipher;
-import java.time.Instant;
-import java.util.Optional;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * JPA adapter for the {@link IntegrationRepository} port.

@@ -1,15 +1,16 @@
 package ar.edu.um.turnos.catalog.catalog.application.usecases;
 
-import ar.edu.um.turnos.catalog.catalog.application.exception.CatalogException;
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.in.ApplySnapshotUseCase;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
 import java.time.Instant;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.catalog.application.exception.CatalogException;
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.in.ApplySnapshotUseCase;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
 
 /**
  * Applies a complete snapshot to the local copy.
@@ -49,6 +50,7 @@ public class ApplySnapshotUseCaseImpl implements ApplySnapshotUseCase {
                 snapshot.getProfessionalCategories().size(),
                 snapshot.getProfessionals().size(),
                 snapshot.getWeeklySchedules().size());
+        // return CatalogSyncState
         return state;
     }
 

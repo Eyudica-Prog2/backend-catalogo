@@ -1,8 +1,9 @@
 package ar.edu.um.turnos.catalog.catalog.domain.ports.in;
 
+import java.util.List;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklySchedule;
 import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklyScheduleQuery;
-import java.util.List;
 
 /**
  * Use case: read the weekly schedules of a professional.

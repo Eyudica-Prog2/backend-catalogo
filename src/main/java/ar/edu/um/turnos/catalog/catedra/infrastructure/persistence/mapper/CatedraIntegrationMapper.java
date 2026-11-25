@@ -1,9 +1,10 @@
 package ar.edu.um.turnos.catalog.catedra.infrastructure.persistence.mapper;
 
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
 import ar.edu.um.turnos.catalog.catedra.domain.model.ProvisioningStatus;
 import ar.edu.um.turnos.catalog.catedra.infrastructure.persistence.entity.CatedraIntegrationEntity;
-import org.springframework.stereotype.Component;
 
 /**
  * Maps the domain model to the JPA entity and back.

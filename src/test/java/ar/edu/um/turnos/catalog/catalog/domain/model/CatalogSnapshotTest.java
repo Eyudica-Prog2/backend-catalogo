@@ -3,11 +3,12 @@ package ar.edu.um.turnos.catalog.catalog.domain.model;
 import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-import ar.edu.um.turnos.catalog.support.CatalogFixtures;
 import java.time.LocalTime;
 import java.util.Collections;
 import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import ar.edu.um.turnos.catalog.support.CatalogFixtures;
 
 /**
  * Unit test of the rules that decide whether a snapshot can replace the local copy.

@@ -1,8 +1,9 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.repository;
 
-import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.WeeklyScheduleEntity;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.WeeklyScheduleEntity;
 
 /**
  * Spring Data repository. The domain never imports this type: it is reached only through the

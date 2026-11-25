@@ -1,6 +1,5 @@
 package ar.edu.um.turnos.catalog.shared.technical;
 
-import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
 import java.net.http.HttpClient;
 import java.time.Duration;
 import org.springframework.context.annotation.Bean;
@@ -9,6 +8,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.JdkClientHttpRequestFactory;
 import org.springframework.web.client.RestClient;
+
+import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
 
 /**
  * HTTP client used for every call to the catedra.

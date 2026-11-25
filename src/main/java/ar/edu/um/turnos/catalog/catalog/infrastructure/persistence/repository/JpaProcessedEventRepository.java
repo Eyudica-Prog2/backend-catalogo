@@ -1,11 +1,12 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.repository;
 
-import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.ProcessedEventEntity;
 import java.time.Instant;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+
+import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.ProcessedEventEntity;
 
 /**
  * Spring Data repository behind {@code processed_event}. It stays inside the

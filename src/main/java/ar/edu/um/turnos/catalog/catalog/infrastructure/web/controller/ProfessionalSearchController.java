@@ -1,14 +1,5 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.web.controller;
 
-import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalPage;
-import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalSearchCriteria;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetProfessionalByIdUseCase;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetProfessionalCategoriesUseCase;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.in.SearchProfessionalsUseCase;
-import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.ProfessionalCategoryResponse;
-import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.ProfessionalDetailResponse;
-import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.ProfessionalResponse;
-import ar.edu.um.turnos.catalog.catalog.infrastructure.web.mapper.ProfessionalDtoMapper;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +10,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalPage;
+import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalSearchCriteria;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetProfessionalByIdUseCase;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetProfessionalCategoriesUseCase;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.in.SearchProfessionalsUseCase;
+import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.ProfessionalCategoryResponse;
+import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.ProfessionalDetailResponse;
+import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.ProfessionalResponse;
+import ar.edu.um.turnos.catalog.catalog.infrastructure.web.mapper.ProfessionalDtoMapper;
 
 /**
  * Public API over the local copy of the catalog (section 6 of the statement).

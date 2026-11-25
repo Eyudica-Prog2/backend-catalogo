@@ -5,11 +5,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import ar.edu.um.turnos.catalog.CatalogApplication;
-import ar.edu.um.turnos.catalog.support.CatalogFixtures;
-import ar.edu.um.turnos.catalog.support.PreloadedCatalogSnapshotConfiguration;
-import ar.edu.um.turnos.catalog.support.TestEnvironment;
-import ar.edu.um.turnos.catalog.support.TestTokens;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -23,6 +18,12 @@ import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
+
+import ar.edu.um.turnos.catalog.CatalogApplication;
+import ar.edu.um.turnos.catalog.support.CatalogFixtures;
+import ar.edu.um.turnos.catalog.support.PreloadedCatalogSnapshotConfiguration;
+import ar.edu.um.turnos.catalog.support.TestEnvironment;
+import ar.edu.um.turnos.catalog.support.TestTokens;
 
 /**
  * Evidence of the initialization from a snapshot (section 4.1 of the statement): a service

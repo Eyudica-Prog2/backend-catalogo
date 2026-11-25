@@ -1,10 +1,11 @@
 package ar.edu.um.turnos.catalog.catedra.infrastructure.rest.mapper;
 
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
 import ar.edu.um.turnos.catalog.catedra.domain.model.ProvisioningStatus;
 import ar.edu.um.turnos.catalog.catedra.infrastructure.rest.dto.IntegrationResponse;
 import ar.edu.um.turnos.catalog.shared.util.Strings;
-import org.springframework.stereotype.Component;
 
 /**
  * Maps the contract payload of the catedra into the domain model.

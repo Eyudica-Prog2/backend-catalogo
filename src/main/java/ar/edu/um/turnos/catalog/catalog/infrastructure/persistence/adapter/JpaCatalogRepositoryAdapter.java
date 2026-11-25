@@ -1,5 +1,15 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.adapter;
 
+import java.util.List;
+import java.util.Optional;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalCategory;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalDetails;
@@ -13,15 +23,6 @@ import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.mapper.Catalo
 import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.repository.JpaProfessionalCategoryRepository;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.repository.JpaProfessionalRepository;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.repository.JpaWeeklyScheduleRepository;
-import java.util.List;
-import java.util.Optional;
-import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.Specification;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * JPA adapter for the {@link CatalogRepository} port: every read of the local copy.

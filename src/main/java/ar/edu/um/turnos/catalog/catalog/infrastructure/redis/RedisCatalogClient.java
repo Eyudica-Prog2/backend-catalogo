@@ -1,7 +1,5 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.redis;
 
-import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
-import ar.edu.um.turnos.catalog.shared.error.CatedraException;
 import io.lettuce.core.ClientOptions;
 import io.lettuce.core.RedisClient;
 import io.lettuce.core.RedisException;
@@ -15,6 +13,9 @@ import java.util.Map;
 import java.util.Optional;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
+import ar.edu.um.turnos.catalog.shared.error.CatedraException;
 
 /**
  * Minimal Redis client used by the catalog copy: {@code GET}, {@code HGET}, {@code HGETALL}

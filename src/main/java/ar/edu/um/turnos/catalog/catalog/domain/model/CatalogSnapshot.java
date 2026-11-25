@@ -1,6 +1,5 @@
 package ar.edu.um.turnos.catalog.catalog.domain.model;
 
-import ar.edu.um.turnos.catalog.shared.util.Strings;
 import java.time.Instant;
 import java.util.HashSet;
 import java.util.List;
@@ -8,6 +7,8 @@ import java.util.Set;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+
+import ar.edu.um.turnos.catalog.shared.util.Strings;
 
 /**
  * Complete catalog snapshot as published by the catedra (contract v1, section 7).

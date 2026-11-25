@@ -4,6 +4,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import java.util.List;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
 import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalPage;
@@ -12,9 +16,6 @@ import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogRepository;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
 import ar.edu.um.turnos.catalog.support.CatalogFixtures;
 import ar.edu.um.turnos.catalog.support.CatedraRedisFixture;
-import java.util.List;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Incremental application of the versions published in Redis (sections 3.2, 6 and 10.1 of the

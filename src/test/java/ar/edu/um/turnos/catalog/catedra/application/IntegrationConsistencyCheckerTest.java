@@ -2,11 +2,12 @@ package ar.edu.um.turnos.catalog.catedra.application;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.List;
+import org.junit.jupiter.api.Test;
+
 import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
 import ar.edu.um.turnos.catalog.catedra.domain.model.ProvisioningStatus;
 import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
-import java.util.List;
-import org.junit.jupiter.api.Test;
 
 /**
  * Verifies that the environment is validated against the catedra response, and that the redis

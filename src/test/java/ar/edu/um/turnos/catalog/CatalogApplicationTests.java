@@ -6,14 +6,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
-import ar.edu.um.turnos.catalog.catedra.domain.model.ProvisioningStatus;
-import ar.edu.um.turnos.catalog.catedra.domain.ports.out.IntegrationRepository;
-import ar.edu.um.turnos.catalog.shared.config.AppJwtProperties;
-import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
-import ar.edu.um.turnos.catalog.shared.config.SecretsProperties;
-import ar.edu.um.turnos.catalog.shared.error.ErrorCodes;
-import ar.edu.um.turnos.catalog.support.TestTokens;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -28,6 +20,15 @@ import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
+
+import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
+import ar.edu.um.turnos.catalog.catedra.domain.model.ProvisioningStatus;
+import ar.edu.um.turnos.catalog.catedra.domain.ports.out.IntegrationRepository;
+import ar.edu.um.turnos.catalog.shared.config.AppJwtProperties;
+import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
+import ar.edu.um.turnos.catalog.shared.config.SecretsProperties;
+import ar.edu.um.turnos.catalog.shared.error.ErrorCodes;
+import ar.edu.um.turnos.catalog.support.TestTokens;
 
 /**
  * Smoke test of the running application: one single {@code @SpringBootTest} for the whole

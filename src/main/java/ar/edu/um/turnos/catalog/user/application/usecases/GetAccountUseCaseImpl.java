@@ -1,11 +1,12 @@
 package ar.edu.um.turnos.catalog.user.application.usecases;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.user.application.exception.UserException;
 import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
 import ar.edu.um.turnos.catalog.user.domain.ports.in.GetAccountUseCase;
 import ar.edu.um.turnos.catalog.user.domain.ports.out.UserRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 /**
  * Returns the profile behind {@code GET /api/account}.

@@ -1,6 +1,5 @@
 package ar.edu.um.turnos.catalog.shared.security;
 
-import ar.edu.um.turnos.catalog.shared.config.AppJwtProperties;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +22,8 @@ import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfigurationSource;
+
+import ar.edu.um.turnos.catalog.shared.config.AppJwtProperties;
 
 /**
  * Security rules of backend-catalogo.

@@ -4,16 +4,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+import java.time.DayOfWeek;
+import java.time.LocalTime;
+import java.util.List;
+import org.junit.jupiter.api.Test;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.rest.dto.SnapshotCategoryResponse;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.rest.dto.SnapshotProfessionalResponse;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.rest.dto.SnapshotResponse;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.rest.dto.SnapshotWeeklyScheduleResponse;
 import ar.edu.um.turnos.catalog.support.CatalogFixtures;
-import java.time.DayOfWeek;
-import java.time.LocalTime;
-import java.util.List;
-import org.junit.jupiter.api.Test;
 
 /**
  * Unit test of the mapper between the payload of the catedra and the domain snapshot.

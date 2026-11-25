@@ -6,10 +6,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import ar.edu.um.turnos.catalog.catalog.CatalogApiIntegrationTest;
-import ar.edu.um.turnos.catalog.shared.error.ErrorCodes;
-import ar.edu.um.turnos.catalog.support.TestEnvironment;
-import ar.edu.um.turnos.catalog.support.TestTokens;
 import com.nimbusds.jose.JWSAlgorithm;
 import com.nimbusds.jose.JWSHeader;
 import com.nimbusds.jose.crypto.MACSigner;
@@ -21,6 +17,11 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+
+import ar.edu.um.turnos.catalog.catalog.CatalogApiIntegrationTest;
+import ar.edu.um.turnos.catalog.shared.error.ErrorCodes;
+import ar.edu.um.turnos.catalog.support.TestEnvironment;
+import ar.edu.um.turnos.catalog.support.TestTokens;
 
 /**
  * Authorization rules of the service (section 9 of the statement): who may reach each

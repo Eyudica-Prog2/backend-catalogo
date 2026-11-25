@@ -1,13 +1,5 @@
 package ar.edu.um.turnos.catalog.user.infrastructure.persistence.adapter;
 
-import ar.edu.um.turnos.catalog.user.application.exception.UserException;
-import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
-import ar.edu.um.turnos.catalog.user.domain.ports.out.UserRepository;
-import ar.edu.um.turnos.catalog.user.infrastructure.persistence.entity.AuthorityEntity;
-import ar.edu.um.turnos.catalog.user.infrastructure.persistence.entity.UserEntity;
-import ar.edu.um.turnos.catalog.user.infrastructure.persistence.mapper.UserMapper;
-import ar.edu.um.turnos.catalog.user.infrastructure.persistence.repository.JpaAuthorityRepository;
-import ar.edu.um.turnos.catalog.user.infrastructure.persistence.repository.JpaUserRepository;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Optional;
@@ -16,6 +8,15 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+
+import ar.edu.um.turnos.catalog.user.application.exception.UserException;
+import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
+import ar.edu.um.turnos.catalog.user.domain.ports.out.UserRepository;
+import ar.edu.um.turnos.catalog.user.infrastructure.persistence.entity.AuthorityEntity;
+import ar.edu.um.turnos.catalog.user.infrastructure.persistence.entity.UserEntity;
+import ar.edu.um.turnos.catalog.user.infrastructure.persistence.mapper.UserMapper;
+import ar.edu.um.turnos.catalog.user.infrastructure.persistence.repository.JpaAuthorityRepository;
+import ar.edu.um.turnos.catalog.user.infrastructure.persistence.repository.JpaUserRepository;
 
 /**
  * JPA adapter for the {@link UserRepository} port (tables {@code jhi_user},

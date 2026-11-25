@@ -1,12 +1,13 @@
 package ar.edu.um.turnos.catalog.user.infrastructure.persistence.mapper;
 
-import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
-import ar.edu.um.turnos.catalog.user.infrastructure.persistence.entity.AuthorityEntity;
-import ar.edu.um.turnos.catalog.user.infrastructure.persistence.entity.UserEntity;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
+import ar.edu.um.turnos.catalog.user.infrastructure.persistence.entity.AuthorityEntity;
+import ar.edu.um.turnos.catalog.user.infrastructure.persistence.entity.UserEntity;
 
 /**
  * Maps an end user between the domain and {@code jhi_user}.

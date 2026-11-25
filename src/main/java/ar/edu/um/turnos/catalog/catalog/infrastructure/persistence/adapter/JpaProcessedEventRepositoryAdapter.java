@@ -1,13 +1,14 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.adapter;
 
-import ar.edu.um.turnos.catalog.catalog.domain.ports.out.ProcessedEventRepository;
-import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.ProcessedEventEntity;
-import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.repository.JpaProcessedEventRepository;
 import java.time.Duration;
 import java.time.Instant;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+
+import ar.edu.um.turnos.catalog.catalog.domain.ports.out.ProcessedEventRepository;
+import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.ProcessedEventEntity;
+import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.repository.JpaProcessedEventRepository;
 
 /**
  * JPA adapter for the {@link ProcessedEventRepository} port.

@@ -1,10 +1,5 @@
 package ar.edu.um.turnos.catalog.user.infrastructure.security;
 
-import ar.edu.um.turnos.catalog.shared.config.AppJwtProperties;
-import ar.edu.um.turnos.catalog.shared.security.JwtClaims;
-import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
-import ar.edu.um.turnos.catalog.user.domain.model.IssuedToken;
-import ar.edu.um.turnos.catalog.user.domain.ports.out.AuthTokenIssuer;
 import com.nimbusds.jose.JWSAlgorithm;
 import com.nimbusds.jose.JWSHeader;
 import com.nimbusds.jose.crypto.MACSigner;
@@ -15,6 +10,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.shared.config.AppJwtProperties;
+import ar.edu.um.turnos.catalog.shared.security.JwtClaims;
+import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
+import ar.edu.um.turnos.catalog.user.domain.model.IssuedToken;
+import ar.edu.um.turnos.catalog.user.domain.ports.out.AuthTokenIssuer;
 
 /**
  * Outbound adapter that issues the end user JWT: HS256, signed with {@code APP_JWT_SECRET},

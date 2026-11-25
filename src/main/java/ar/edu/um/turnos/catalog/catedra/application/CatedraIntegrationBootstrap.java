@@ -1,15 +1,16 @@
 package ar.edu.um.turnos.catalog.catedra.application;
 
-import ar.edu.um.turnos.catalog.shared.error.CatedraException;
-import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
-import ar.edu.um.turnos.catalog.catedra.domain.ports.in.RefreshIntegrationUseCase;
-import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
+import ar.edu.um.turnos.catalog.catedra.domain.ports.in.RefreshIntegrationUseCase;
+import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
+import ar.edu.um.turnos.catalog.shared.error.CatedraException;
 
 /**
  * Refreshes the technical integration during startup.

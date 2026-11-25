@@ -1,10 +1,11 @@
 package ar.edu.um.turnos.catalog.user.infrastructure.web.dto;
 
-import ar.edu.um.turnos.catalog.user.domain.model.UserRegistration;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
+
+import ar.edu.um.turnos.catalog.user.domain.model.UserRegistration;
 
 /**
  * Body of {@code POST /api/register} (section 3.2 of the statement).

@@ -1,8 +1,9 @@
 package ar.edu.um.turnos.catalog.user.infrastructure.persistence.repository;
 
-import ar.edu.um.turnos.catalog.user.infrastructure.persistence.entity.UserEntity;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import ar.edu.um.turnos.catalog.user.infrastructure.persistence.entity.UserEntity;
 
 /**
  * Spring Data repository of {@code jhi_user}.

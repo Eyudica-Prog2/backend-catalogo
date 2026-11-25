@@ -2,12 +2,13 @@ package ar.edu.um.turnos.catalog.user.infrastructure.security;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import ar.edu.um.turnos.catalog.shared.config.AppJwtProperties;
-import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
 import com.nimbusds.jwt.SignedJWT;
 import java.util.List;
 import java.util.UUID;
 import org.junit.jupiter.api.Test;
+
+import ar.edu.um.turnos.catalog.shared.config.AppJwtProperties;
+import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
 
 class JwtTokenIssuerTest {
 

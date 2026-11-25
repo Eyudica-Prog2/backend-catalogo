@@ -1,5 +1,9 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.web.mapper;
 
+import java.util.List;
+import java.util.Objects;
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.application.exception.CatalogException;
 import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalCategory;
@@ -12,9 +16,6 @@ import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.ProfessionalDetai
 import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.ProfessionalResponse;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.WeeklyScheduleResponse;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.WeeklyScheduleSlotResponse;
-import java.util.List;
-import java.util.Objects;
-import org.springframework.stereotype.Component;
 
 /**
  * Maps the domain of the local copy into the bodies of the public API and of the internal

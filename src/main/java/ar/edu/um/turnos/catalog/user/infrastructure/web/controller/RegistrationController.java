@@ -1,8 +1,5 @@
 package ar.edu.um.turnos.catalog.user.infrastructure.web.controller;
 
-import ar.edu.um.turnos.catalog.user.domain.ports.in.RegisterUserUseCase;
-import ar.edu.um.turnos.catalog.user.infrastructure.web.dto.RegisterRequest;
-import ar.edu.um.turnos.catalog.user.infrastructure.web.mapper.UserDtoMapper;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -10,6 +7,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import ar.edu.um.turnos.catalog.user.domain.ports.in.RegisterUserUseCase;
+import ar.edu.um.turnos.catalog.user.infrastructure.web.dto.RegisterRequest;
+import ar.edu.um.turnos.catalog.user.infrastructure.web.mapper.UserDtoMapper;
 
 /**
  * Registration of a new end user: {@code POST /api/register} (section 3.2 of the statement).

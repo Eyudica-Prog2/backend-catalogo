@@ -1,14 +1,15 @@
 package ar.edu.um.turnos.catalog.catalog.application.usecases;
 
+import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogVersionWindow;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetSyncStatusUseCase;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogIncrementalGateway;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
-import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * Reports the state of the synchronization.

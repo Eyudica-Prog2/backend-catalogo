@@ -7,9 +7,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import ar.edu.um.turnos.catalog.catalog.CatalogApiIntegrationTest;
-import ar.edu.um.turnos.catalog.shared.error.ErrorCodes;
-import ar.edu.um.turnos.catalog.user.domain.ports.out.UserRepository;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nimbusds.jwt.SignedJWT;
@@ -19,6 +16,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+
+import ar.edu.um.turnos.catalog.catalog.CatalogApiIntegrationTest;
+import ar.edu.um.turnos.catalog.shared.error.ErrorCodes;
+import ar.edu.um.turnos.catalog.user.domain.ports.out.UserRepository;
 
 /**
  * Registration, authentication and account of the end user (sections 3.2, 8 and 9 of the

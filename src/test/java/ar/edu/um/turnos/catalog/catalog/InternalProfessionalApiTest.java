@@ -5,8 +5,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import ar.edu.um.turnos.catalog.shared.error.ErrorCodes;
-import ar.edu.um.turnos.catalog.support.CatalogFixtures;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
@@ -14,6 +12,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+
+import ar.edu.um.turnos.catalog.shared.error.ErrorCodes;
+import ar.edu.um.turnos.catalog.support.CatalogFixtures;
 
 /**
  * End to end tests of the internal contract consumed by {@code backend-turnos} (section 5 of

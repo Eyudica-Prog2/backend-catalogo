@@ -1,13 +1,14 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.redis;
 
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncDiagnostic;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncDiagnostics;
-import ar.edu.um.turnos.catalog.catalog.infrastructure.redis.dto.RedisDiagnosticValue;
-import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncDiagnostic;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncDiagnostics;
+import ar.edu.um.turnos.catalog.catalog.infrastructure.redis.dto.RedisDiagnosticValue;
+import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
 
 /**
  * Outbound adapter that writes the breadcrumb of the private namespace of this project:

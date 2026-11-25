@@ -3,14 +3,6 @@ package ar.edu.um.turnos.catalog.catedra.infrastructure.rest;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.catchThrowableOfType;
 
-import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
-import ar.edu.um.turnos.catalog.catedra.domain.model.ProvisioningStatus;
-import ar.edu.um.turnos.catalog.catedra.infrastructure.rest.mapper.CatedraIntegrationResponseMapper;
-import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
-import ar.edu.um.turnos.catalog.shared.error.CatedraException;
-import ar.edu.um.turnos.catalog.shared.technical.CatedraTechnicalClient;
-import ar.edu.um.turnos.catalog.shared.technical.CatedraTokenHolder;
-import ar.edu.um.turnos.catalog.shared.technical.RetryExecutor;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
@@ -26,6 +18,15 @@ import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.client.JdkClientHttpRequestFactory;
 import org.springframework.web.client.RestClient;
+
+import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
+import ar.edu.um.turnos.catalog.catedra.domain.model.ProvisioningStatus;
+import ar.edu.um.turnos.catalog.catedra.infrastructure.rest.mapper.CatedraIntegrationResponseMapper;
+import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
+import ar.edu.um.turnos.catalog.shared.error.CatedraException;
+import ar.edu.um.turnos.catalog.shared.technical.CatedraTechnicalClient;
+import ar.edu.um.turnos.catalog.shared.technical.CatedraTokenHolder;
+import ar.edu.um.turnos.catalog.shared.technical.RetryExecutor;
 
 /**
  * Contract test of the catedra client against a local HTTP server (MockWebServer): happy

@@ -1,10 +1,5 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.kafka;
 
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogEventOutcome;
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogUpdatedEvent;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.in.ProcessCatalogUpdatedUseCase;
-import ar.edu.um.turnos.catalog.catalog.infrastructure.kafka.dto.CatalogUpdatedPayload;
-import ar.edu.um.turnos.catalog.catalog.infrastructure.kafka.mapper.CatalogUpdatedPayloadMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -12,6 +7,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogEventOutcome;
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogUpdatedEvent;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.in.ProcessCatalogUpdatedUseCase;
+import ar.edu.um.turnos.catalog.catalog.infrastructure.kafka.dto.CatalogUpdatedPayload;
+import ar.edu.um.turnos.catalog.catalog.infrastructure.kafka.mapper.CatalogUpdatedPayloadMapper;
 
 /**
  * Inbound adapter that consumes {@code CatalogUpdated} from
@@ -81,6 +82,7 @@ public class CatalogUpdatedKafkaListener {
     private CatalogUpdatedEvent parse(String payload) {
         try {
             CatalogUpdatedPayload parsed = objectMapper.readValue(payload, CatalogUpdatedPayload.class);
+            // To catalogUpdatedEvent
             return payloadMapper.toDomain(parsed);
         } catch (JsonProcessingException | IllegalArgumentException rejected) {
             // The body is never logged: only the reason, so a malformed or unexpected

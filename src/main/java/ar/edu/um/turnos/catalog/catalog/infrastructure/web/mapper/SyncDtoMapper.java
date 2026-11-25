@@ -1,9 +1,10 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.web.mapper;
 
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
 import ar.edu.um.turnos.catalog.catalog.domain.model.SyncResult;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.SyncStatusResponse;
-import org.springframework.stereotype.Component;
 
 /**
  * Maps the synchronization state into the body of {@code GET /api/sync/status} and of the

@@ -1,10 +1,5 @@
 package ar.edu.um.turnos.catalog.shared.technical;
 
-import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
-import ar.edu.um.turnos.catalog.shared.error.CatedraException;
-import ar.edu.um.turnos.catalog.shared.error.ErrorCodes;
-import ar.edu.um.turnos.catalog.shared.error.FieldErrorDetail;
-import ar.edu.um.turnos.catalog.shared.util.Strings;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,6 +18,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestClientResponseException;
+
+import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
+import ar.edu.um.turnos.catalog.shared.error.CatedraException;
+import ar.edu.um.turnos.catalog.shared.error.ErrorCodes;
+import ar.edu.um.turnos.catalog.shared.error.FieldErrorDetail;
+import ar.edu.um.turnos.catalog.shared.util.Strings;
 
 /**
  * Technical HTTP client shared by every capability that talks to the catedra API with the

@@ -1,5 +1,10 @@
 package ar.edu.um.turnos.catalog.catedra.infrastructure.rest;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
 import ar.edu.um.turnos.catalog.catedra.domain.ports.out.CatedraIntegrationGateway;
 import ar.edu.um.turnos.catalog.catedra.infrastructure.rest.dto.IntegrationResponse;
@@ -7,10 +12,6 @@ import ar.edu.um.turnos.catalog.catedra.infrastructure.rest.mapper.CatedraIntegr
 import ar.edu.um.turnos.catalog.shared.error.CatedraException;
 import ar.edu.um.turnos.catalog.shared.technical.CatedraTechnicalClient;
 import ar.edu.um.turnos.catalog.shared.util.Strings;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 /**
  * Outbound adapter for the technical integration of contract v1 (section 5).

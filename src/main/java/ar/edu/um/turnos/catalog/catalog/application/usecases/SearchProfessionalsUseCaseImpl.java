@@ -1,11 +1,12 @@
 package ar.edu.um.turnos.catalog.catalog.application.usecases;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalPage;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalSearchCriteria;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.in.SearchProfessionalsUseCase;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 /**
  * Searches professionals over the local copy.

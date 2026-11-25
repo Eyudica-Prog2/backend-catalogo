@@ -1,15 +1,16 @@
 package ar.edu.um.turnos.catalog.catalog.application;
 
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.in.RunFullSyncUseCase;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
-import ar.edu.um.turnos.catalog.shared.error.ApiException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.in.RunFullSyncUseCase;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
+import ar.edu.um.turnos.catalog.shared.error.ApiException;
 
 /**
  * Initializes an empty local copy during startup.

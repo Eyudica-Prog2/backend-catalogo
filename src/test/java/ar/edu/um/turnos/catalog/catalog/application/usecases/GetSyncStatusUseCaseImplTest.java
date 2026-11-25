@@ -3,8 +3,6 @@ package ar.edu.um.turnos.catalog.catalog.application.usecases;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
-import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
 import java.time.Instant;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
@@ -12,6 +10,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
 
 /**
  * Unit tests of the use case that reports the state of the synchronization.

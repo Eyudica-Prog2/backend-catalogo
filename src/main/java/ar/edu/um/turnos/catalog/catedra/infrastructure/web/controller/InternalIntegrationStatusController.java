@@ -1,13 +1,14 @@
 package ar.edu.um.turnos.catalog.catedra.infrastructure.web.controller;
 
-import ar.edu.um.turnos.catalog.catedra.domain.ports.in.GetIntegrationStatusUseCase;
-import ar.edu.um.turnos.catalog.catedra.infrastructure.web.dto.IntegrationStatusResponse;
-import ar.edu.um.turnos.catalog.catedra.infrastructure.web.mapper.IntegrationStatusDtoMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import ar.edu.um.turnos.catalog.catedra.domain.ports.in.GetIntegrationStatusUseCase;
+import ar.edu.um.turnos.catalog.catedra.infrastructure.web.dto.IntegrationStatusResponse;
+import ar.edu.um.turnos.catalog.catedra.infrastructure.web.mapper.IntegrationStatusDtoMapper;
 
 /**
  * Exposes the technical integration held by this service.

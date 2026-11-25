@@ -1,5 +1,13 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.redis;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.Map;
+import java.util.Optional;
+import java.util.function.Function;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogChanges;
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogVersionWindow;
 import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
@@ -13,13 +21,6 @@ import ar.edu.um.turnos.catalog.catalog.infrastructure.redis.dto.RedisScheduleVa
 import ar.edu.um.turnos.catalog.catalog.infrastructure.redis.mapper.RedisPayloadMapper;
 import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
 import ar.edu.um.turnos.catalog.shared.error.CatedraException;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.util.Map;
-import java.util.Optional;
-import java.util.function.Function;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 /**
  * Outbound adapter that reads the incremental feed published by the catedra in Redis

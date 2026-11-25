@@ -1,14 +1,15 @@
 package ar.edu.um.turnos.catalog.catalog.application.usecases;
 
+import java.util.Comparator;
+import java.util.List;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalDetails;
 import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklySchedule;
 import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklyScheduleQuery;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetProfessionalByIdUseCase;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetWeeklySchedulesUseCase;
-import java.util.Comparator;
-import java.util.List;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 /**
  * Reads the weekly schedules applicable to a query.

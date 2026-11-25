@@ -1,8 +1,9 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.repository;
 
-import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.ProfessionalEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+
+import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.ProfessionalEntity;
 
 /**
  * Spring Data repository. The domain never imports this type: it is reached only through the

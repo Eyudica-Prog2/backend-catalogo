@@ -1,6 +1,5 @@
 package ar.edu.um.turnos.catalog.shared.crypto;
 
-import ar.edu.um.turnos.catalog.shared.config.SecretsProperties;
 import java.nio.charset.StandardCharsets;
 import java.security.GeneralSecurityException;
 import java.security.MessageDigest;
@@ -11,6 +10,8 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.shared.config.SecretsProperties;
 
 /**
  * AES-256-GCM cipher with a random 12 byte IV per encryption.

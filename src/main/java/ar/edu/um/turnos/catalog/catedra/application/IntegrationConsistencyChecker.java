@@ -1,14 +1,15 @@
 package ar.edu.um.turnos.catalog.catedra.application;
 
-import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
-import ar.edu.um.turnos.catalog.catedra.domain.model.ProvisioningStatus;
-import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
-import ar.edu.um.turnos.catalog.shared.util.Strings;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.catedra.domain.model.CatedraIntegration;
+import ar.edu.um.turnos.catalog.catedra.domain.model.ProvisioningStatus;
+import ar.edu.um.turnos.catalog.shared.config.CatedraProperties;
+import ar.edu.um.turnos.catalog.shared.util.Strings;
 
 /**
  * Validates that the integration reported by the catedra is coherent with the values that

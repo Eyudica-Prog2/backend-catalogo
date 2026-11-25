@@ -1,7 +1,8 @@
 package ar.edu.um.turnos.catalog.user.domain.ports.out;
 
-import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
 import java.util.Optional;
+
+import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
 
 /**
  * Outbound port: storage of the end users (tables {@code jhi_user},

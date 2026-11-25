@@ -1,17 +1,18 @@
 package ar.edu.um.turnos.catalog.user.application.usecases;
 
-import ar.edu.um.turnos.catalog.user.application.exception.UserException;
-import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
-import ar.edu.um.turnos.catalog.user.domain.model.UserRegistration;
-import ar.edu.um.turnos.catalog.user.domain.ports.in.RegisterUserUseCase;
-import ar.edu.um.turnos.catalog.user.domain.ports.out.PasswordHasher;
-import ar.edu.um.turnos.catalog.user.domain.ports.out.UserRepository;
 import java.time.Instant;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
+import ar.edu.um.turnos.catalog.user.application.exception.UserException;
+import ar.edu.um.turnos.catalog.user.domain.model.EndUser;
+import ar.edu.um.turnos.catalog.user.domain.model.UserRegistration;
+import ar.edu.um.turnos.catalog.user.domain.ports.in.RegisterUserUseCase;
+import ar.edu.um.turnos.catalog.user.domain.ports.out.PasswordHasher;
+import ar.edu.um.turnos.catalog.user.domain.ports.out.UserRepository;
 
 /**
  * Registers a new end user (section 3.2 of the statement).

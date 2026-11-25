@@ -2,6 +2,9 @@ package ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.mapper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.time.Instant;
+import org.junit.jupiter.api.Test;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
 import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalCategory;
@@ -11,8 +14,6 @@ import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.Profes
 import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.ProfessionalEntity;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.persistence.entity.WeeklyScheduleEntity;
 import ar.edu.um.turnos.catalog.support.CatalogFixtures;
-import java.time.Instant;
-import org.junit.jupiter.api.Test;
 
 /**
  * Unit test of the persistence mapper: a domain value that is written and read back must come

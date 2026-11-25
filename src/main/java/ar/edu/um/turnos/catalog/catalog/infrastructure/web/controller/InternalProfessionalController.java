@@ -1,13 +1,5 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.web.controller;
 
-import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalDetails;
-import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklySchedule;
-import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklyScheduleQuery;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetProfessionalByIdUseCase;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetWeeklySchedulesUseCase;
-import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.ProfessionalResponse;
-import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.WeeklyScheduleSlotResponse;
-import ar.edu.um.turnos.catalog.catalog.infrastructure.web.mapper.ProfessionalDtoMapper;
 import java.time.LocalDate;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +9,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalDetails;
+import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklySchedule;
+import ar.edu.um.turnos.catalog.catalog.domain.model.WeeklyScheduleQuery;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetProfessionalByIdUseCase;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.in.GetWeeklySchedulesUseCase;
+import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.ProfessionalResponse;
+import ar.edu.um.turnos.catalog.catalog.infrastructure.web.dto.WeeklyScheduleSlotResponse;
+import ar.edu.um.turnos.catalog.catalog.infrastructure.web.mapper.ProfessionalDtoMapper;
 
 /**
  * Internal contract consumed by {@code backend-turnos} (section 4.2 of the statement: a

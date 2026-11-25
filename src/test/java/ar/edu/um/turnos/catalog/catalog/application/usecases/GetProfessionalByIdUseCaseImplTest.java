@@ -4,11 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.when;
 
-import ar.edu.um.turnos.catalog.catalog.application.exception.CatalogException;
-import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
-import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalDetails;
-import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogRepository;
-import ar.edu.um.turnos.catalog.support.CatalogFixtures;
 import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
@@ -16,6 +11,12 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import ar.edu.um.turnos.catalog.catalog.application.exception.CatalogException;
+import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
+import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalDetails;
+import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogRepository;
+import ar.edu.um.turnos.catalog.support.CatalogFixtures;
 
 /**
  * Unit tests of the use case that reads one professional of the local copy.

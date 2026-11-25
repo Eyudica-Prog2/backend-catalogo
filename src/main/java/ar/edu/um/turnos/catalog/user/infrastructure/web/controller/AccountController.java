@@ -1,14 +1,15 @@
 package ar.edu.um.turnos.catalog.user.infrastructure.web.controller;
 
-import ar.edu.um.turnos.catalog.user.domain.ports.in.GetAccountUseCase;
-import ar.edu.um.turnos.catalog.user.infrastructure.web.dto.AccountResponse;
-import ar.edu.um.turnos.catalog.user.infrastructure.web.mapper.UserDtoMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import ar.edu.um.turnos.catalog.user.domain.ports.in.GetAccountUseCase;
+import ar.edu.um.turnos.catalog.user.infrastructure.web.dto.AccountResponse;
+import ar.edu.um.turnos.catalog.user.infrastructure.web.mapper.UserDtoMapper;
 
 /**
  * Profile of the authenticated user: {@code GET /api/account} (JHipster compatible).

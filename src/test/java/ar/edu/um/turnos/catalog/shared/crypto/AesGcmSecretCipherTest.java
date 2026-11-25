@@ -3,8 +3,9 @@ package ar.edu.um.turnos.catalog.shared.crypto;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-import ar.edu.um.turnos.catalog.shared.config.SecretsProperties;
 import org.junit.jupiter.api.Test;
+
+import ar.edu.um.turnos.catalog.shared.config.SecretsProperties;
 
 class AesGcmSecretCipherTest {
 

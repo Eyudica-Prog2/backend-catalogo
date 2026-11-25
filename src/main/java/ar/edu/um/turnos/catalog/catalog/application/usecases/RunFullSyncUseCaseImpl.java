@@ -1,5 +1,11 @@
 package ar.edu.um.turnos.catalog.catalog.application.usecases;
 
+import java.time.Instant;
+import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.in.ApplySnapshotUseCase;
@@ -7,11 +13,6 @@ import ar.edu.um.turnos.catalog.catalog.domain.ports.in.RunFullSyncUseCase;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSnapshotGateway;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
 import ar.edu.um.turnos.catalog.shared.error.ApiException;
-import java.time.Instant;
-import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * Runs a full synchronization: downloads the snapshot from the catedra and applies it.

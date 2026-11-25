@@ -9,6 +9,13 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import java.time.Instant;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSnapshot;
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogSyncState;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.in.ApplySnapshotUseCase;
@@ -16,12 +23,6 @@ import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSnapshotGateway;
 import ar.edu.um.turnos.catalog.catalog.domain.ports.out.CatalogSyncRepository;
 import ar.edu.um.turnos.catalog.shared.error.CatedraException;
 import ar.edu.um.turnos.catalog.support.CatalogFixtures;
-import java.time.Instant;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 /**
  * Unit test of the use case that runs a full synchronization.

@@ -1,5 +1,7 @@
 package ar.edu.um.turnos.catalog.catalog.infrastructure.redis.mapper;
 
+import org.springframework.stereotype.Component;
+
 import ar.edu.um.turnos.catalog.catalog.domain.model.CatalogChanges;
 import ar.edu.um.turnos.catalog.catalog.domain.model.Professional;
 import ar.edu.um.turnos.catalog.catalog.domain.model.ProfessionalCategory;
@@ -8,7 +10,6 @@ import ar.edu.um.turnos.catalog.catalog.infrastructure.redis.dto.RedisCategoryVa
 import ar.edu.um.turnos.catalog.catalog.infrastructure.redis.dto.RedisChangesPayload;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.redis.dto.RedisProfessionalValue;
 import ar.edu.um.turnos.catalog.catalog.infrastructure.redis.dto.RedisScheduleValue;
-import org.springframework.stereotype.Component;
 
 /**
  * Maps the JSON published by the catedra in Redis (contract v1, section 14) into the domain
